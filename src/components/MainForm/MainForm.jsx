@@ -4,9 +4,9 @@ import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 
 const MainForm = () => {
-  const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem('contacts')) ?? []
-  );
+  const [contacts, setContacts] = useState(() => {
+    return JSON.parse(localStorage.getItem('contacts')) ?? [];
+  });
   const [filter, setFiltr] = useState('');
 
   useEffect(() => {
