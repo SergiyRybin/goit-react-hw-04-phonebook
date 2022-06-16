@@ -13,7 +13,6 @@ const MainForm = () => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
-  useEffect(() => {}, []);
 
   const fromStateData = data => {
     const { name, id, number } = data;
